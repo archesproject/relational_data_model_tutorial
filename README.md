@@ -67,10 +67,10 @@ Run the following sql command to create a relational data model schema from all 
     and name != 'Arches System Settings';"
 
 
-## 4.) Create Actor and Film Resource Instance in the relational data model
+## 4.) Create Actor and Film Resource Instances in the relational data model
 
-Before adding any attributes to our resources we must create the resource instances. We create resource instances in the relational data model by populating the `instances` view in the schema of the model we would like to create instances for.
-In this case we will be creating instances for both actors and films.
+Before adding any attributes to our resources we must create the resource instances themselves. We create resource instances in the relational data model by populating the `instances` view in the schema of the model we would like to create instances for.
+In this case we will be creating instances for both actors and films using the resourceintsanceid from our staging schema as the Arches resource instance id. In this tutorial those already happen to be UUIDs.
 
     -- raise notice 'now creating actor.instances....';
     INSERT INTO actor.instances(
@@ -95,7 +95,7 @@ In this case we will be creating instances for both actors and films.
 Now that we have resource instances we can begin adding attributes to those instances. 
 
 In Arches attributes are stored in 'nodes', which are organized into 'nodegroups'.
-The relational data model creates a view for each nodegroup with columns for each node that collects data in that nodegroup. Take the following example for a name nodegroup with a node for first and last name.
+The relational data model creates a schema for each model, a view for each nodegroup in that model, and columns for each node that collects data in that nodegroup. Take the following example for a name nodegroup with a node for first and last name.
     
 
     -- raise notice 'now creating actor.names....';
@@ -111,7 +111,7 @@ The relational data model creates a view for each nodegroup with columns for eac
 
 After running this sql you will have populated the string datatype nodes for first and last name in the actor.names view. 
     
-At this point, if you wish, you can return to your command line and reindex your database to view the chagnes you have made.
+At this point, if you wish, you can return to your command line and reindex your database to view the changes you have made in Arches.
 
     (env) python manage.py es reindex_database
 
@@ -167,7 +167,7 @@ Finally, we must also transform our source geometry from our staging format to g
 
 After running this sql you should have populated many attributes for each film instance in the relational data model.
 
-To see these changes in Arches you can return to your command line and reindex your database to view the chagnes you have made.
+To see these changes in Arches you can return to your command line and reindex your database to view the changes you have made in Arches.
 
     (env) python manage.py es reindex_database
 
@@ -195,7 +195,7 @@ Here we have an insert statement to the film.actor view which represents the Act
     from dvdstaging.film_actor;
 
 
-To see these changes in Arches you can return to your command line and reindex your database to view the chagnes you have made.
+To see these changes in Arches you can return to your command line and reindex your database to view the changes you have made in Arches.
 
     (env) python manage.py es reindex_database
 
