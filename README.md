@@ -123,9 +123,9 @@ In the following example we will add multiple attributes to the films.informatio
 
 First, because we are creating data for a concept datatype node (which in Arches requires you to use a labelid) we need to lookup the correct labelid for the given source data's label. 
 
-The 'with' statement below creates a temporary lableid lookup, using two customized functions `__arches_get_labels_for_concept_node` and `__arches_get_node_id_for_view_column`. This lookup is then used below to select the correct labelid for an incoming rating from our staging schema.
+The 'with' statement below creates a temporary lableid lookup, using two customized functions `__arches_get_labels_for_concept_node` and `__arches_get_node_id_for_view_column`. This lookup is then used in our insert statement to select the correct labelid for an incoming rating from our staging schema.
 
-The date too must be in the correct format for import into arches in this case we must transform the data from our staging schema to a valid year represented with in the YYYY format.
+The date too must be in the correct format for import into arches. In this case we must transform the data from our staging schema to a valid year represented with in the YYYY format.
 
 Finally, we must also transform our source geometry from our staging format to geojson. To do this we utilize postgres json selectors and postgis functions.
 
@@ -175,8 +175,7 @@ To see these changes in Arches you can return to your command line and reindex y
 
 The final datatype we will cover in this tutorial will be related resources. Related resources are imported via the relational data model as json. The following sql uses standard postgres json manipulation to create the resource_x_resource object.
 
-Here we have an insert statement to the film.actor view which represents the Actor nodegroup within the Film data model. resourceinstanceid in the insert statement corresponds to the film instance the related actor node belongs to and the resourceId 
-    property within the resource_x_resource object corresponds to the actor that we would like to relate to that film instance.
+Here we have an insert statement to the film.actor view which represents the Actor nodegroup within the Film data model. `resourceinstanceid` in the insert statement corresponds to the film instance the related actor node belongs to and the `resourceId` property within the resource_x_resource object corresponds to the actor that we would like to relate to that film instance.
 
     -- raise notice 'now creating film <-> actor data...';
     INSERT INTO film.actor (
