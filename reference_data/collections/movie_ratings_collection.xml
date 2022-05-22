@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <skos:Collection rdf:about="http://localhost:8000/fee1ac6f-c4c0-4e22-a292-f581420359f3">
+    <skos:prefLabel xml:lang="en">{"id": "07de0ebe-eca0-4d20-9061-90572c95ec0e", "value": "Movie Ratings"}</skos:prefLabel>
+    <skos:member>
+      <skos:Concept rdf:about="http://localhost:8000/2a21673b-c84d-4bea-be82-637f8aae93f9"/>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://localhost:8000/7efb7aba-8b48-41e0-a982-b0071c0608cd"/>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://localhost:8000/299cc1f4-39f2-4cf5-9ff1-05613ab2d067"/>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://localhost:8000/15f2a4b0-8c60-42e8-b34f-87f6eb3bd739"/>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://localhost:8000/622497fd-0fe2-4d4c-b74c-eff385c0a334"/>
+    </skos:member>
+  </skos:Collection>
+  <skos:Collection rdf:about="http://localhost:8000/00000000-0000-0000-0000-000000000005">
+    <skos:member>
+      <skos:Concept rdf:about="http://localhost:8000/00000000-0000-0000-0000-000000000007"/>
+    </skos:member>
+    <skos:prefLabel xml:lang="en-us">{"id": "d8c622f6-e786-11e6-905a-475a5eee86f5", "value": "Resource To Resource Relationship Types"}</skos:prefLabel>
+  </skos:Collection>
+</rdf:RDF>

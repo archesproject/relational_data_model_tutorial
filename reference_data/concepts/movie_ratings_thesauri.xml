@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <skos:Concept rdf:about="http://localhost:8000/15f2a4b0-8c60-42e8-b34f-87f6eb3bd739">
+    <skos:inScheme>
+      <skos:ConceptScheme rdf:about="http://localhost:8000/66963f87-97b6-412c-a515-a17eca7e1529">
+        <dcterms:title xml:lang="en">{"id": "8f8b97cb-7877-4b46-8883-2e31a02e778f", "value": "Movie Ratings"}</dcterms:title>
+        <skos:hasTopConcept rdf:resource="http://localhost:8000/7efb7aba-8b48-41e0-a982-b0071c0608cd"/>
+        <skos:hasTopConcept rdf:resource="http://localhost:8000/299cc1f4-39f2-4cf5-9ff1-05613ab2d067"/>
+        <skos:hasTopConcept rdf:resource="http://localhost:8000/15f2a4b0-8c60-42e8-b34f-87f6eb3bd739"/>
+        <skos:hasTopConcept rdf:resource="http://localhost:8000/2a21673b-c84d-4bea-be82-637f8aae93f9"/>
+        <skos:hasTopConcept rdf:resource="http://localhost:8000/622497fd-0fe2-4d4c-b74c-eff385c0a334"/>
+      </skos:ConceptScheme>
+    </skos:inScheme>
+    <skos:prefLabel xml:lang="en">{"id": "08139aab-595c-468c-86a5-3c653dcb4ee7", "value": "R"}</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://localhost:8000/299cc1f4-39f2-4cf5-9ff1-05613ab2d067">
+    <skos:prefLabel xml:lang="en">{"id": "20bb6e19-aaff-47a3-a0c1-de2f2a31d9b6", "value": "PG"}</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://localhost:8000/66963f87-97b6-412c-a515-a17eca7e1529"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://localhost:8000/7efb7aba-8b48-41e0-a982-b0071c0608cd">
+    <skos:inScheme rdf:resource="http://localhost:8000/66963f87-97b6-412c-a515-a17eca7e1529"/>
+    <skos:prefLabel xml:lang="en">{"id": "4f47d784-5157-49a5-abc7-fa7d1acbb417", "value": "NC-17"}</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://localhost:8000/622497fd-0fe2-4d4c-b74c-eff385c0a334">
+    <skos:prefLabel xml:lang="en">{"id": "17989517-bce1-4628-8af8-83517ed2610d", "value": "G"}</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://localhost:8000/66963f87-97b6-412c-a515-a17eca7e1529"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://localhost:8000/2a21673b-c84d-4bea-be82-637f8aae93f9">
+    <skos:inScheme rdf:resource="http://localhost:8000/66963f87-97b6-412c-a515-a17eca7e1529"/>
+    <skos:prefLabel xml:lang="en">{"id": "7ca66bd4-847a-4e24-b99c-33eebe14c004", "value": "PG-13"}</skos:prefLabel>
+  </skos:Concept>
+</rdf:RDF>

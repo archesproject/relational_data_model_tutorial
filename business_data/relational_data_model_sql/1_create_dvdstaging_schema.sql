@@ -1,0 +1,8 @@
+CREATE SCHEMA dvdstaging;
+
+COMMENT ON SCHEMA dvdstaging IS NULL;
+
+ALTER SCHEMA dvdstaging OWNER TO postgres;
+
+GRANT USAGE ON SCHEMA dvdstaging TO postgres WITH GRANT OPTION;
+GRANT CREATE ON SCHEMA dvdstaging TO postgres WITH GRANT OPTION;
